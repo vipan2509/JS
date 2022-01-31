@@ -11,11 +11,8 @@ body {
     min-height: 100vh;
 }
 
-header, form {
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    background-color: aliceblue;
 }
 
 form input, form button {
@@ -37,3 +34,46 @@ form button:hover {
     color: white;
 }
 
+.red {
+    color:lightcoral;
+}
+.green { color: lightseagreen; }
+.blue { color: rgb(55, 55, 231); }
+
+.completed {
+    text-decoration: line-through;
+   
+}
+ul.todo-list {
+    list-style-type: none;
+}
+.todo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+}
+li.todo-item {
+    flex: 1;
+    text-align: left;
+    background-color: #fff;
+}
+
+.complete-btn {
+    background-color: rgb(104, 189, 6);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.trash-btn {
+    background-color: rgb(189, 6, 6);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
