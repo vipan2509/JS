@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+<h1>Objects</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=R8rmfD9Y5-c, https://www.youtube.com/watch?v=roumzWd4XJU</p>
+
+</body>
+
+<script>
+    var employee = {
+	  id:101,
+	  firstName: "Vipan",
+	  lastName: "Kumar",
+	  age: 30,
+	  doj: "07/10/2022",
+	  address : {
+		  city: "Palampur",
+		  country: "India",
+	  },
+	  skills: ["Html", "Css", "JavaScript", "React"],
+
+	  fullName: function(){
+		return `${this.firstName} ${this.lastName}`;
+	  },
+	};
+	
+	console.log(employee)
+	console.log(employee.address.country) // India
+	console.log(employee.skills[1]) // css
+	
+	console.log(employee.fullName());
+	
+	///////////////////////////////////////////////////////////////////////
+
+	 // Array of objects in JavaScript
+	 
+    let employeeDate = [
+		{
+			id:101,
+	  		firstName: "Vipan",
+	  		lastName: "Kumar",
+	  		age: 30,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:102,
+	  		firstName: "Amit",
+	  		lastName: "Kumar",
+	  		age: 26,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:103,
+	  		firstName: "Vijay",
+	  		lastName: "Kumar",
+	  		age: 28,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:104,
+	  		firstName: "Preet",
+	  		lastName: "Kumar",
+	  		age: 32,
+	  		doj: "07/10/2022",
+			address: {
+				city: "Mandi",
+			},
+			skills: ["Html", "CSS", "Bootstrap"]  
+		}
+	]
+    
+	console.log(employeeDate[3].address)
+	console.log(employeeDate[3].skills[2])
+
+	 /// ES6 Destructuring 
+
+     const {firstName, age } = employee;
+	 console.log(firstName, age)
+
+
+	////////////////////////////////////////////////////////////////////////
+
+    const employeeJSON = JSON.stringify(employeeDate);
+	console.log(employeeJSON) 
+
+	const empArray = JSON.parse(employeeJSON);
+	console.log(empArray)
+
+    ////////////////////////////////////////////////////////////////////////
+
+
+	// Accessing Object Properties with Dot Notation
+	var testObj = {
+	  "hat": "ballcap",
+	  "shirt": "jersey",
+	  "shoes": ["Nike","Puma",]
+	};
+	
+	var hatValue = testObj.hat;
+	var shirtValue = testObj.shirt;
+	
+	console.log(hatValue)  // ballcap
+	console.log(shirtValue) // jersey
+	
+	
+	// Accessing Object Properties with Bracket Notation
+	var testObj1 = {
+	  "a hat": "Puma",
+	  "a shirt": "Duke",
+	  "shoes": "Nike"
+	};
+	
+	var hatValue1 = testObj1["a hat"];
+	var shirtValue1 = testObj1["a shirt"];
+	var shoesValue1 = testObj1["shoes"];
+	
+	console.log(hatValue1) // Puma
+	console.log(shirtValue1) // Duke
+	console.log(shoesValue1) // Nike
+	
+	
+	// Accessing Object Properties with Variables
+	var testObj = {
+	  12: "Ram",
+	  13: "Shyam",
+	  14: "Rohit",
+	};
+	
+	var playerNumber = 16;
+	var player = testObj[playerNumber];
+	
+	console.log(playerNumber);
+	console.log(player);
+	
+	// Updating Object Properties
+	var studentData = {
+	  "Name": "Vipan",
+	  "Age": 18,
+	  "Class": "5th",
+	  "Subject": ["English", "Hindi", "Maths"]
+	};
+	
+	studentData.Name = "Viku";
+	console.log(studentData) // Viku
+	
+	
+	// Add New Properties to an object
+	var studentDataNew = {
+	  "Name": "Vipan",
+	  "Age": "18",
+	  "Class": "5th",
+	};
+	
+	studentDataNew.Place = "Palampur";
+	studentDataNew['State'] = "HP";
+	console.log(studentDataNew)
+	
+	// Delete Properties to an object
+	var studentDataDel = {
+	  "Name": "Vipan",
+	  "Age": "18",
+	  "Class": "5th",
+	};
+	
+	delete studentDataDel.Age;
+	console.log(studentDataDel)
+	
+	
+	
+	// Testing object properties // hasOwnPropertys
+	var myObj = {
+	  gift: "pony",
+	  pet: "kitten",
+	  bed: "sleigh"
+	};
+	
+	function checkObj(checkProps){
+	   if(myObj.hasOwnProperty(checkProps)){
+	      return myObj[checkProps];
+	   }
+	   else{
+	    return "Not Found"
+	   }
+	}
+	
+	console.log(checkObj("gift"));
+	
+	
+	
+	// Manipulating Complex Objects
+	 var myMusic = [
+	   {
+	     "artist": "Billy Joel",
+		 "title": "Piano Man",
+		 "release_year": 1973,
+		 "formats": [ 
+		   "CD",
+		   "8T", 
+		   "LP"
+		 ], 
+		 "gold": true 
+	  },
+	   {
+	     "artist": "Sonu Nigam", 
+		 "title": "Dil Ruba",
+		 "release_year": 1985, 
+		 "formats": [ 
+		   "Your Tube Video", 
+		 ], 
+		 "gold": true 
+	  } 
+	 ];
+	
+	
+	// Accessing Nested Objects
+	var myStorage = {
+	  "car": {
+	   "inside": {
+	      "glove box": "maps",
+		  "passenger seat": "crumbs",
+	   },
+	   "outside": {
+	     "trunk": "jack"
+	   }
+	  }
+	};
+	
+	var gloveBoxContents = myStorage.car.inside["glove box"];
+	console.log(gloveBoxContents)
+	
+	
+	// Accessing Nested Arrays
+	
+	var myPlants = [
+	 {
+	  type: "flowers",
+	  list: [
+	   "rose",
+	   "tultip",
+	   "dandelion"
+	  ]
+	 },
+	 {
+	  type: "trees",
+	  list: [
+	    "fir",
+		"pine",
+		"birch"
+	  ]
+	 }
+	]
+	
+	var secondTree1 = myPlants;
+	var secondTree2 = myPlants[1];
+	var secondTree3 = myPlants[1].list[1];
+	console.log(secondTree1) // it will print complete object
+	console.log(secondTree2) // it will print 2nd object
+	console.log(secondTree3) // pine
+	
+	
+	// Record Collection
+    
+	var collection = {
+	  "1089":{
+	   "album": "Slippery When wet",
+	   "artist": "Bon Jovi",
+	   "tracks": [
+	    "Let It Rock",
+		"You Give Love a bad name"
+	   ]
+	  },
+	  "1188":{
+	  "album": "1999",
+	  "artist": "Prince",
+	  "tracks": [
+	    "1999",
+		"Little Red Corvette"
+	  ]
+	  },
+	  "1245":{
+	  "artist": "Robert Palmer",
+	  "tracks": []
+	  },
+	  "5439":{
+	   "album": "ABBA Gold"
+	  }
+	};
+	
+	
+	var collectionCopy = JSON.parse(JSON.stringify(collection));
+	// fancy way to copy an object
+	console.log(collectionCopy)
+	
+	// 1st condition we are testing if the value is blank, delete the property
+	
+	function updateRecords(id, prop, value) {
+	  
+	  if(value === ""){
+	     delete collection[id][prop];
+	  } else if (prop === "tracks"){
+	     // if the track propert is empty we are going to create it, if it exists or if it doesn't exists we're going to create it.
+	    collection[id][prop] = collection[id][prop] || [];
+		collection[id][prop].push(value);
+	  }
+	  else {
+	   collection[id][prop] = value;
+	  }
+	
+	  return collection;
+	}
+	
+  console.log(updateRecords(5439, "artist", "Vipan")); // Artist Added
+  updateRecords(1245, "artist", "Kaasni"); // Record Update
+	
+	
+</script>
+</html>

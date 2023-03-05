@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile LookUp</title>
+</head>
+<body>
+
+<h1>While Loop</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg</p>
+
+</body>
+
+<script>
+    var contacts = [
+	  {
+	   "firstName": "Ram  ",
+	   "lastNamw": "Laine",
+	   "number": "987456",
+	   "likes": ["Pizza","Coding","Brownie Points"]
+	  },
+	  {
+	   "firstName": "Harry",
+	   "lastNamw": "Potter",
+	   "number": "874587",
+	   "likes": ["Magic","Arts","Science"]
+	  },
+	  {
+	   "firstName": "Shyam",
+	   "lastNamw": "Holmes",
+	   "number": "87426",
+	   "likes": ["PHP","Coding","Java"]
+	  },
+	  {
+	   "firstName": "Reena",
+	   "lastNamw": "Laine",
+	   "number": "987456",
+	   "likes": ["C++","Maths","Ganes"]
+	  },
+	  {
+	   "firstName": "Veena",
+	   "lastNamw": "Laine",
+	   "number": "987456",
+	   "likes": ["Oracle","Painting","C"]
+	  },
+	  {
+	   "firstName": "Gita",
+	   "lastNamw": "Laine",
+	   "number": "987456",
+	   "likes": ["Maths","Drawing","Science"]
+	  },
+	]
+	
+	console.log(contacts)
+	
+	function lookUpProfile(name, prop){
+	   for (var i = 0; i < contacts.length; i++ ) {
+	      if (contacts[i].firstName === name) {
+		    return contacts[i][prop] || "No such Property";
+		  }
+	   }
+	   return "No Such Contact"
+	}
+	
+	// Change these value to test your function
+	var data = lookUpProfile("Harry", "likes")
+	console.table(data)
+</script>
+</html>

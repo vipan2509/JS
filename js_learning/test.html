@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+
+  
+
+</body>
+
+<script>
+ 
+
+	function myName (name1, age) {
+		console.log(`My name is ${name1} and age is ${age} `)
+	}
+	
+	//myName("vipan", 31)
+
+	/********************************************************/
+
+	var arrow = () => {
+		console.log("myName")
+	}
+
+	//arrow()
+
+	/********************************************************/
+
+	// The sope of this is very diffent 
+
+
+	var personName = {
+		name : "Vipan",
+		age : 23,
+		designation : "UI Dev",
+		getName : function() {
+			console.log(this.name)
+			console.log(this.age)
+			console.log(this.designation)
+		}
+	}
+
+	personName.getName();
+
+	const peson = {
+		test () {
+			console.log(this);
+		}
+	}
+
+	peson.test();
+
+	let myFunc = {  
+		showArgs(){ 
+		console.log(arguments); 
+		} 
+	}; 
+myFunc.showArgs(1, 2, 3, 4);
+
+let me = { 
+ name: "Ashutosh Verma", 
+ thisInArrow:() => { 
+ console.log("My name is " + this.name); // no 'this' binding here 
+ }, 
+ thisInRegular(){ 
+ console.log("My name is " + this.name); // 'this' binding works here 
+ } 
+};
+me.thisInArrow(); 
+me.thisInRegular();
+
+
+</script>
+</html>

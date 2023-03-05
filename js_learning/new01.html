@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+<h1>Hello, <div id="app"></div></h1>
+
+
+</body>
+
+<script>
+    const age = 62;
+	const ticketPrice = 500;
+	const discount = 50;
+	const tax = 100;
+	
+	document.write(`Ticket Price is ${ticketPrice}`)
+	document.write(`<br>`)
+	if (age <= 21){
+	const price = ticketPrice - discount;
+	document.write(`Ticket Price Rs:${price}`)
+	}
+	
+	else if (age >= 60){
+	const sprice = ticketPrice+discount+tax
+	document.write(`Ticket Price Rs:${sprice}`)
+	document.write("</br>")
+	}
+	
+	else {
+	const newPrice = ticketPrice+tax;
+	document.write(`Ticket Price Rs:${newPrice}`)
+	document.write("</br>")
+	}
+	
+	
+	for (var num=1; num<=10; num++){
+	  if(num%2 != 0){
+		document.write(num)
+		document.write("</br>")
+	    }
+	}
+	
+	<!-- var num=5; -->
+	<!-- if(num%2 == 0){ -->
+		<!-- document.write("Even Number") -->
+		<!-- console.log(num) -->
+	<!-- } -->
+	<!-- else { -->
+		<!-- document.write("Odd Number") -->
+		<!-- console.log(num) -->
+	<!-- } -->
+	
+</script>
+</html>

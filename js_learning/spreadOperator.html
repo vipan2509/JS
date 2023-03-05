@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spread Operator</title>
+</head>
+<body>
+
+<h1>Spread Operator</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg</p>
+
+</body>
+
+<script>
+    const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'];
+	
+	let arr2; 
+	(function() { arr2 = arr1; 
+	arr1[2] = 'potato'})();
+	console.log(arr2);
+	
+	///////////////// or //////////////
+	
+	 const array1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'];
+	
+	let array2; 
+	(function() { array2 = [...arr1]; 
+	array1[2] = 'potato'})();
+	console.log(array2);
+	
+	
+	
+</script>
+</html> 

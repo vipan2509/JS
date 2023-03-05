@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Closures</title>
+</head>
+<body>
+
+	<button onclick="x">Click</button>
+</body>
+<script>
+	
+	const myName = "vipan";
+	
+
+	function x(){
+		var a = 7;
+		const myName = "Kaashu";
+		 function y(){
+			console.log(a);
+			console.log(myName)
+		 }
+		 y()
+	}
+	x()
+
+
+	function ss(){
+		let s = 50
+		const myName = "suman";
+		console.log(s)
+		console.log(myName)
+	}
+	ss()
+
+	console.log(myName)
+	
+</script>
+</html>

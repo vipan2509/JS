@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+
+<h1>Arrays allow you to store several pieces of data in one place.</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=R8rmfD9Y5-c, https://www.youtube.com/watch?v=roumzWd4XJU</p>
+
+</body>
+
+<script>
+    
+	const links = [
+  { name: 'terms of use', url: pdfRoutes.footerPdf.termOfUse, isDownload: true },
+  { name: 'privacy policy', url: pdfRoutes.footerPdf.privacyPolicy, isDownload: false },
+];
+
+ {links.map((el) => (
+        <>
+        {el.isDownload ? (
+          <a  sx={styles.downloadLink} key={el?.name} href={el?.url} variant="footer" download>
+          {el?.name } 
+        </a>
+        ) : (
+          <a  sx={styles.downloadLink} key={el?.name} href={el?.url} variant="footer">
+          {el?.name } 
+        </a>
+        )}
+        </>
+      ))}
+	 
+</script>
+</html>

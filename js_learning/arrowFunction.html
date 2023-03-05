@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arrow Function</title>
+</head>
+<body>
+
+<h1>Arrow Function</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg</p>
+
+</body>
+
+<script>
+    const magic = () => new Data();
+	
+	// Write Arrow Functions with Parameters
+	// old way
+	var myConcat = function(arr1, arr2) {
+	  return arr1.concat(arr2);
+	};
+	
+	console.log(myConcat([1, 2], [3, 4, 5]));
+	
+	// New Way
+	const myConcatNew = (arr1, arr2) => arr1.concat(arr2);
+	console.log(myConcatNew([1, 2], [3, 4, 5]));
+	
+	// Write Higher Order Arrow Function
+	// Use the Rest Operator with Function Parameters
+	
+	const increment = (function(){
+	 return function increment(number, value = 1){
+	   return number + value;
+	};
+	})();
+	
+	console.log(increment(5, 2));
+	console.log(increment(5));
+	
+	
+	// Use the Rest Operator with Function Parameters
+	const sum = (function(){
+	  return function sum(x, y, z){
+	    const args = [x, y, z];
+		 return args.reduce((a, b) => a + b, 0);
+	  };
+	})();
+	console.log(sum(1, 5, 3));
+	
+	const sum1 = (function(){
+	  return function sum1(...args){
+		 return args.reduce((a, b) => a + b, 0);
+	  };
+	})();
+	console.log(sum1(1, 5, 3, 10, 20));
+	
+	
+</script>
+</html>

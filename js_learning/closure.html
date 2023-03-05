@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Closures</title>
+</head>
+<body>
+
+	<button onclick="x">Click</button>
+</body>
+<script>
+	
+	function x(){
+		var a = 7;
+		function y(){
+			console.log(a);
+		}
+		return y;
+	}
+
+var z = x();
+console.log(z);
+z();
+	
+</script>
+</html>

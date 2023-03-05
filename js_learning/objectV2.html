@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+<h1>Objects</h1>
+<style>
+	table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+</style>
+<script>
+	var user = 
+	  {
+		"id": 1,
+		"name": "Vipan",
+		"username": "vipan2509",
+		"email": "vipanp09@gmail.com",
+		"address": {
+		  "street": "491-D",
+		  "suite": "Apt. 556",
+		  "city": "Gwenborough",
+		  "zipcode": "176061",
+		  "geo": {
+			"lat": "-37.3159",
+			"lng": "81.1496"
+		  }
+		},
+		salary: function(){
+			return 85000;
+		},
+		"phone": [78945621, 4558255, 4555555],
+		"website": "hildegard.org",
+		"company": {
+		  "name": "Tmotions",
+		  "catchPhrase": "Multi-layered client-server neural-net",
+		  "bs": "harness real-time e-markets"
+		}
+	  }
+	 
+	
+	console.log(user)
+	</script>
+<table>
+	<tr>
+	  <th>Name</th>
+	  <th>UserName</th>
+	  <th>Email</th>
+	  <th>Address</th>
+	  <th>Salary</th>
+	  <th>Phone</th>
+	  <th>Website</th>
+	  <th>Company</th>
+	</tr>
+	<tr>
+	  <td><script>document.write(user.name)</script></td>
+	  <td><script>document.write(user.username)</script></td>
+	  <td><script>document.write(user.email)</script></td>
+	  <td><script>
+	  document.write('Street: ', user.address.street)
+	  document.write('</br>')
+	  document.write('Suite: ', user.address.suite)
+	  document.write('</br>')
+	  document.write('Pin: ', user.address.zipcode)
+	</script></td>
+	  <td><script>document.write(user.salary())</script></td>
+	  <td><script>document.write(user.phone)</script></td>
+	  <td><script>document.write(user.website)</script></td>
+	  <td><script>document.write(user.company.name)</script></td>
+	</tr>
+	
+  </table>
+</body>
+</html>

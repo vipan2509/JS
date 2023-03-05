@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js</title>
+</head>
+<body>
+
+<h1>Arrays allow you to store several pieces of data in one place.</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=R8rmfD9Y5-c</p>
+
+</body>
+
+<script>
+   var ourArray = ["John", 23, "ABM", "Palampur"];
+   console.log(ourArray)
+   // 0: "John"
+   // 1: 23
+   // 2: "ABM"
+   // 3: "Palampur"
+   // length: 4
+   
+   // Nested Array
+   // When one of the elements in an array is another array called nested array or multidimensional array.
+   
+   var myArray = [["Vipan, 30"], ["Suman, 28"], ["Kaasni, 4"]]
+   console.log(myArray)
+   
+   // Access Array data with Indexes
+   var itemList = [50,60,70,80,90];
+   var findItem = itemList[4]; 
+   console.log(findItem) // Ans = 90
+   
+   // Modify Array Data with Indexes
+   itemList[4] = 100;
+   console.log(itemList)
+   
+   // Access multi-dimensional array with indexes
+   var numberList = [[1,2,3],[4,5,6],[7,8,9],[[10,11,12],13,14]];
+   var myData = numberList[3][0]
+   console.log(myData)
+
+
+   ///////// ARRAYS METHOD ///////////
+   // sort(), pop(), shift(), push(), unshift()
+   
+   // Manipulate Arrays with push()
+   // Add data to the end of an array with push function
+   
+   var listOne = ["Stimson's", "j", "cat"];
+   listOne.push(["Vipan, K, Boy"]);
+   console.log(listOne);
+   
+   // pop() remove last array
+   var listTwo = [["John", 23], ["Vipan, 30"],["Nick, 25"]]
+   var newlistTwo = listTwo.pop();
+   console.log(listTwo)
+   
+   // shift() remove first array
+   // unshift() add at the beginning of the array
+   
+   
+   // ES6 Array 
+   const items = [
+   {name:'Maruti 800', price:1000},
+   {name:'k10', price:2000},
+   {name:'Santro', price:3000},
+   {name:'Eon', price:3000},
+   {name:'Verna', price:4000},
+   {name:'i20', price:4000},
+   {name:'Dezire', price:5000},
+   ]
+   
+   // 1. Filter 
+   const filterItems = items.filter((item) => {
+     return item.price <= 2000
+   })
+   console.log(filterItems)
+   
+   // 2. Map 
+   const itemNames = items.map((item) => {
+     return item.name
+   })
+   console.log(itemNames)
+
+   const myMap = items.map( (it) => {return it.price})
+   console.log(myMap)
+   
+   // 3. Find  (It will print the value)
+   const foundItem = items.find((item) => {
+       return item.name === 'Eon'
+   })
+   console.log(foundItem)
+   // Ans = name: "Eon", price: 3000
+   
+   // 4. findIndex = (It will print the INDEX value) -1 is returned when nothing is found
+   const findIndex = items.findIndex((item) => {
+      return item.price >= 5000
+   })
+   console.log(findIndex)
+   // Ans is 6
+   
+   // 5. forEach -- it simply print all the elements.
+   items.forEach((item) => {
+   console.log(item.name)
+   })
+   
+   // 6. some  - it returns value in TRUE/FALSE
+   const hasInexpensiveItem = items.some((item) => {
+      return item.price <= 100
+   })
+   console.log(hasInexpensiveItem)
+   
+   // 7. every  - it returns value in TRUE/FALSE
+   const hasInexpensiveItems = items.every((item) => {
+      return item.price <= 5000
+   })
+   console.log(hasInexpensiveItems)
+   
+   
+   // 8. Promise
+   
+   // 9. Array.isArray(arr)
+   
+   // 10. split/join
+   
+   // 11. reverse()
+   
+   // 12. includes(value)
+   
+   // 13. indexOf/lastIndexOf(item, pos)
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      index = fruits.indexOf("Apple");
+      console.log(index)
+   
+   // 14. concat - (joins) two or more arrays.
+	  const newCars = [
+	  {name:'Volvo', price:52000}, 
+	  {name:'BMW', price:60000}, 
+	  {name:'Honda', price:45000},
+	  ];
+	  const newTrucks = [
+	  {name:'Tata MV', price:80000}, 
+	  {name:'CW', price:92000}, 
+	  {name:'Volvo HV', price:55000},
+	  {name:'Swaraz', price:55000, Capacity: 14},
+	  ];
+      const totalVehicles = items.concat(newCars, newTrucks);  
+	  console.log(totalVehicles)
+	  
+	  
+	// 15. sort(func)
+	 const myFruits = ["Banana", "Orange", "Apple", "Mango"];
+	 myFruits.sort();
+	 console.log(myFruits)
+	 
+	  myFruits.reverse();
+	 console.log(myFruits)
+	  
+   // 17. slice/splice
+   
+   // Destructuring /////////////////////////////////////
+   const groceryList = [
+   {item:'Apple', price:10.00, category: "fruit"},
+   {item:'Mangoes', price:20.00, category: "fruit"},
+   {item:'Tomatoes', price:30.00, category: "veg"},
+   {item:'Milk', price:30.00, category: "misc"},
+   {item:'Bread', price:40.00, category: "misc"},
+   {item:'Eggs', price:40.00, category: "misc"},
+   {item:'Banana', price:50.00, category: "fruit"},
+   ];
+   
+   //console.log(groceryList[0].item);
+   
+   const [ , ,{item}, ...rest] = groceryList;
+   console.log(item);
+   console.log(rest);
+</script>
+</html>

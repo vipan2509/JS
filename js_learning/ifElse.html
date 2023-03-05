@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+
+<h1>Arrays allow you to store several pieces of data in one place.</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=R8rmfD9Y5-c, https://www.youtube.com/watch?v=roumzWd4XJU</p>
+
+</body>
+
+<script>
+    
+	// Ternary Operator
+	let x = 20;
+	console.log(x===10 ? "True" : "False")
+
+
+	////////////////////////////////////////////////////////////////////
+
+	function testEqual(val){
+	  if( val == 12){
+	    return "Equal"
+	  }
+	  return "No, it's false";
+	}
+	
+	console.log(testEqual(50));
+	
+	
+	// Not Equal
+	function testNotEqual(val){
+	  if ( val != 99){
+	    return "Not Equal";
+	  }
+	  return "Equal";
+	}
+	
+    console.log(testNotEqual(99));	
+	
+	// Greater then operator
+	function testGreaterThen(val){
+	  if ( val >= 33){
+	    return "Pass";
+	  }
+	  return "Fail";
+	}
+	
+    console.log(testGreaterThen(33));
+
+    // Comparisons with the Logical And Operator
+	function testGreaterThen(val){
+	  if(val > 100){
+	    return "Over 100";
+	  }
+	  if(val > 10){
+	   return "Over 10";
+	  }
+	  return "10 or under";
+	}
+	
+	console.log(testGreaterThen(20))
+	 
+	 // Comparisons with Logical AND operator
+	 function testLogicalAnd(val){
+	  if(val <=50 && val >=25){
+	    return "Yes";
+	  }
+	  return "No."
+	  // 25 to 50 PASS
+	 }
+	 console.log(testLogicalAnd(25))
+	 
+	 // Comparisons with Logical OR operator
+	 function testLogicalOr(val){
+	  if(val < 10 || val > 25){
+	    return "Pass";
+	  }
+	  return "Fail"
+	  // 10 to 25 FAIL
+	 }
+	 console.log(testLogicalOr(10))
+	 
+	 
+	 // ELSE Statement
+		
+	 function testElse(val){
+	   var result = "";
+	   
+	   if(val >= 5){
+	     result = "Bigger than or equal to 5";
+	   }
+	   else {
+	     result = "5 or smaller"
+	   }
+	   return result;
+	 }
+	 console.log(testElse(5))
+	 
+	 
+	 // Else if
+	 function testElseIf(val){
+	   if (val > 10){
+	     return "Greater than 10";
+	   }
+	   else if (val < 5) {
+	     return "Smaller than 5";
+	   }
+	   else{
+	     return "Between 5 and 10";
+	   }
+	 }
+	 console.log(testElseIf(11))
+	 
+	 
+	 // Logical Order in If else statement
+	 function OrderMyLogic(val){
+	   if (val < 5){
+	     return "Less than 5";
+	   }
+	   else if (val < 10) {
+	     return "Less than 10";
+	   }
+	   else{
+	     return "Greater than or equal to 10";
+	   }
+	 }
+	 console.log(OrderMyLogic(9))
+	 
+	 
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ternary operator</title>
+</head>
+<body>
+
+<h1>Ternary operator</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg</p>
+
+</body>
+
+<script>
+     
+	// condition ? statement-if-true  :  statement-if-false 
+
+    function checkEqual(a, b){
+	  if(a === b){
+	    return true;
+	  }
+	  else {
+	    return false;
+	   }
+	}
+	
+	console.log(checkEqual(5, 6));
+	console.log("--------")
+	
+	// -------------------------------------------
+	function checkEquals(a, b){
+	  return a === b ? true : false;
+	}
+	console.log(checkEquals(5, 5));
+	console.log("--------")
+	
+	
+	
+	// ----------------------------------------
+	var age = 26;
+    var beverage = (age >= 21) ? "Beer" : "Juice";
+    console.log(beverage); // "Beer"
+	console.log("--------")
+
+    // Use MultiCondition Ternary Operator
+	
+	function checkSign(num){
+	  return num > 0 ? "positive" : num < 0 ? "negative" : "Zero" 
+	}
+	console.log(checkSign(1));
+	
+</script>
+</html>

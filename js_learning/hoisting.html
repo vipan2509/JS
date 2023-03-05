@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+
+  <h2>
+	Hoisting
+  </h2>
+
+</body>
+
+<script>
+     
+	 var x = 1;
+	 a();
+	 b();
+	 console.log(x);
+
+	 function a(){
+		var x = 10;
+		console.log(x);
+		var b1 = this.window.document.URL;
+		console.log(b1)
+	 }
+
+	 
+	 function b(){
+		var x = 100;
+		console.log(x);
+	 }
+
+
+
+
+	 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+function filterOdd(arr) {
+  const filteredArr = [];
+  
+  return filteredArr;
+  console.log(filteredArr)
+}
+console.log(filterOdd(arr));
+
+	 
+	
+</script>
+</html>

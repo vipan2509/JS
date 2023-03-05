@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Object</title>
+</head>
+<body>
+
+<h1>While Loop</h1>
+<p>https://www.youtube.com/watch?v=PkZNo7MFNFg</p>
+
+</body>
+
+<script>
+    // Iterate with while look
+	
+	var myArray = [];
+	var i = 0;
+	while(i < 5){
+	  myArray.push(i);
+	  i++;
+	}
+	
+	console.log(myArray);
+	console.log("----")
+	
+	// for loop
+	var ourArray = [];
+	for (var i = 0; i < 4; i++){
+	  ourArray.push(i);
+	}
+	
+	console.log(ourArray)
+	console.log("----")
+	
+	// Iterate ODD Numbers with a For Loop
+	var ourArrayNew = [];
+	
+	for (var i = 1; i < 10; i += 2){
+	 ourArrayNew.push(i);
+	}
+	
+	console.log(ourArrayNew);
+	
+	
+	////////////////////////////////////////////////////////////////////////
+
+    let employeeDate = [
+		{
+			id:101,
+	  		firstName: "Vipan",
+	  		lastName: "Kumar",
+	  		age: 30,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:102,
+	  		firstName: "Amit",
+	  		lastName: "Kumar",
+	  		age: 26,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:103,
+	  		firstName: "Vijay",
+	  		lastName: "Kumar",
+	  		age: 28,
+	  		doj: "07/10/2022",
+		},
+		{
+			id:104,
+	  		firstName: "Preet",
+	  		lastName: "Kumar",
+	  		age: 32,
+	  		doj: "07/10/2022",
+			address: {
+				city: "Mandi",
+			},
+			skills: ["Html", "CSS", "Bootstrap"]  
+		}
+	]
+
+
+    // for
+	for (let i = 0; i < employeeDate.length; i++){
+		console.log(employeeDate[i].firstName);
+	}
+
+	// forEach
+	employeeDate.forEach(function (emp) {
+		console.log(emp.id)
+	})
+
+	// MAP
+	const names = employeeDate.map(function(emp){
+		return emp.firstName;
+	});
+	console.log(names)
+
+	// Filter
+	const employeeFilter = employeeDate
+	.filter(function(emp){
+		return emp.id == "104";	
+	})
+	;
+
+
+	console.log(employeeFilter);
+
+
+</script>
+</html>

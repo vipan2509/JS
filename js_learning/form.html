@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<style>
+   table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.formOuter { max-width: 500px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="formOuter">
+<h1>Form</h1>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="button" value="submit" onclick="managerData()">
+</form> 
+<br>
+// https://www.youtube.com/watch?v=MRwWB6Cz-Vk
+<div id="msg"><div>
+<table style="width: 100%; text-align: center;">
+ <thead>
+   <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Action</th>
+  </tr>
+ </thead> 
+	<tbody id="root">
+	</tbody>
+</table>
+</div>
+</body>
+
+<script>
+    let id ="";
+	selectData();
+	
+	
+	
+	function managerData() {
+	 // By default we have set msg blank
+	 document.getElementById('msg').innerHTML="";
+	 
+	 let fname = document.getElementById('fname').value;
+	  if (fname == ''){
+	    document.getElementById('msg').innerHTML='Please Enter Your Name';
+	  }
+	  
+	  else{
+	     // if ID == Blank it's Edit Case
+	     if(id==''){
+		   let arr = JSON.parse(localStorage.getItem('crud'));
+		    
+			 // If there is no data in Local Storage
+			if(arr==null){
+			  let data = [fname];
+			  localStorage.setItem('crud', JSON.stringify(data));
+			}
+			else {
+			 arr.push(fname);
+			 localStorage.setItem('crud', JSON.stringify(arr));
+			}
+			
+			document.getElementById('fname').value="";
+			document.getElementById('msg').innerHTML="Data Added";
+		 }
+		 // Add Case
+		 else {
+		 alert ("Me")
+		 }
+		 ocument.getElementById('fname').value="";
+		 selectData();
+	  }
+	  
+	}
+	
+	
+	function selectData() {
+	  let arr = JSON.parse(localStorage.getItem('crud'));
+	  if(arr!= null){
+	   let html = '';
+	   let sno = 1;
+	   for (let item in arr){
+	   html=html+`<tr>
+	   <td>${sno}</td>
+	   <td>${arr[item]}</td>
+	   <td>del</td>
+	   </tr>`;
+	   sno++;
+	   }
+	   document.getElementById('root').innerHTML=html;
+	  }
+	}
+	
+	
+</script>
+</html>

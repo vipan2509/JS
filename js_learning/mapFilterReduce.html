@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Map/Filter/Reduce</title>
+</head>
+<body>
+
+
+  
+
+</body>
+
+<script>
+ // Map Method	
+ const arr = [2,4,6,8,10]
+
+ function double(x){
+		return x*2;
+ } 
+
+const newDoubleList = arr.map(double)	
+console.log(newDoubleList)
+
+// Filter
+const arr2 = [5,10,6,7,3,1,4,5,0]
+
+// Odd List
+function isOdd(x){
+	return x%2
+}
+const oddList = arr2.filter(isOdd)
+console.log(`Odd Number list ${oddList}`)
+
+// Even List
+function isEven(x){
+	return x%2 === 0
+}
+const evenList = arr2.filter(isEven)
+console.log(`Even Number list ${evenList}`)
+
+
+// Reduce
+const numbers = [15.5, 50, 1.1, 4.7];
+
+let redNum = numbers.reduce(getSum, 0);
+
+function getSum(total, num) {
+  return total + Math.round(num);
+}
+console.log(`Reducer ${redNum}`)
+</script>
+</html>

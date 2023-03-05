@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js</title>
+</head>
+<body>
+
+<h1>Var Let Const </h1>
+
+</body>
+
+<script>
+   // var 
+   
+   var greeter = "Hey Hi"
+
+   function myFunction(){
+    var hello = "hello" // This var can only access only inside this function
+    console.log(greeter)
+   }
+
+
+   let greeting = "say Hi";
+   let times = 4;
+
+   if (times > 3) {
+        let hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+    }
+  
+
+   const arr = [ "Fred", "Tom", "Bob" ];
+   for (let i of arr) {
+   console.log(i);
+   }
+   
+   const arrq = [ "1", "2", "Sdsd", "sdsds" ];
+   for (let i = 0; i < arrq.length; i++) {
+   console.log(arrq[i]);
+   }
+
+   var cars = ["car1", "car2", "car3", "car4", "car5" ]
+   console.log(cars)
+
+   cars.forEach(car);
+
+   function car(item) {
+        document.write(item + "<br/>")
+   }
+
+</script>
+</html>
